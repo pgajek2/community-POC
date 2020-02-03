@@ -1,0 +1,26 @@
+<template>
+    <div class="navigation-container">
+        <template for:each={navigationItems} for:item="level1">
+            <div class="navigation-level1-item slds-m-horizontal_xx-small" 
+                 onmouseover={handleToggleLevel2} 
+                 onmouseout={handleToggleLevel2} 
+                 style={navbarItemMaxWidth} 
+                 data-nav-id={level1.Id}
+                 key={level1.Id}>
+                
+                <div class="navigation-level1-item-title" onclick={handleOpenPage} data-page-id={level1.Id}>{level1.Name}</div>
+
+                <div class="navigation-level1-items-container" data-id={level1.Id}>
+
+                    <template for:each={level1.Navbar_Items__r} for:item="level2">
+                        <div class="navigation-level2-item" onclick={handleOpenPage} data-nav-id={level1.Id} data-page-id={level2.Id} key={level2.Id}>
+                            {level2.Name}
+                        </div>
+                    </template>
+
+                </div>
+
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    
+    <c-navigation onpagechange={handlePageChange}></c-navigation>
+
+    <template if:true={isPageListMode}>
+        <c-page-list onopenpagedetails={handleOpenPageDetails} page-list={pagesList}></c-page-list>
+    </template>
+    
+    <template if:true={isPageDetailsMode}>
+        <lightning-formatted-rich-text value={richtext}></lightning-formatted-rich-text>
+    </template>
+
+</template>

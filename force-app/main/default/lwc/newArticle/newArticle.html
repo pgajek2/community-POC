@@ -1,0 +1,54 @@
+<template>
+
+    <template if:true={articlesList}>
+        <div class="slds-m-around_large" style="height: 300px;">
+            <lightning-datatable key-field="KnowledgeArticleId" data={articlesList.data} columns={columns} onrowselection={handleSelectedRows} max-row-selection='1'>
+            </lightning-datatable>
+        </div>
+    </template>
+
+    <!-- edit -->
+    <template if:true={editContent}>
+
+        <lightning-input-rich-text value={editContent}></lightning-input-rich-text>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Title" required value={title} onchange={handleTitle}></lightning-input>
+        </div>
+    
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="URL Name" required value={urlName} onchange={handleURLName}>
+            </lightning-input>
+        </div>
+
+        <lightning-button variant="brand" label="Unpublish" title="Primary action" onclick={handleUnPublish}
+        class="slds-m-around_small slds-align_absolute-center"></lightning-button>
+
+        <lightning-button variant="brand" label="Update" title="Primary action" onclick={handleUpdate}
+        class="slds-m-around_small slds-align_absolute-center"></lightning-button>
+
+    </template>
+
+    <!-- new -->
+    <template if:false={editContent}>
+
+        <lightning-input-rich-text value={newContent}></lightning-input-rich-text>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Title" required value={title} onchange={handleTitle}></lightning-input>
+        </div>
+    
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="URL Name" required value={urlName} onchange={handleURLName}>
+            </lightning-input>
+        </div>
+    
+        <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleClick}
+            class="slds-m-around_small slds-align_absolute-center"></lightning-button>
+
+        <lightning-button variant="brand" label="Publish" title="Primary action" onclick={handlePublish}
+            class="slds-m-around_small slds-align_absolute-center"></lightning-button>
+
+    </template>
+
+</template>

@@ -1,0 +1,9 @@
+.pages-details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pages-details-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}

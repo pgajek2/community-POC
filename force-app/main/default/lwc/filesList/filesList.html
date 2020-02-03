@@ -1,0 +1,40 @@
+<template>
+    <div style="height: min-content; max-width: 50%; margin: auto; display: flex; justify-content: flex-start; align-items: center;" class="slds-grid slds-wrap">
+
+        <template if:true={document}>
+      
+                <lightning-layout>
+
+                    <lightning-layout-item padding="horizontal-medium">
+                        <div class="header-column">
+                            <p class="field-title" title="Field 1"></p>
+                            <p>
+                                <lightning-icon icon-name="standard:file" alternative-text="Doc image" ></lightning-icon>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item padding="horizontal-medium">
+                        <div class="header-column">
+                            <p class="field-title" title="Field 1"></p>
+                            <p><a href="javascript:void(0);" onclick={handleDownload}>{document.Name}</a></p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item padding="horizontal-medium">
+                        <div class="header-column">
+                            <p class="field-title" title="Field 1"></p>
+                            <p>{document.Description__c}</p>
+                        </div>
+                    </lightning-layout-item>
+
+                </lightning-layout>
+
+        </template>
+
+
+        <!-- <lightning-button label="Download" title="Download action" icon-name="utility:download"
+            class="slds-m-horizontal_medium slds-size_1-of-3" onclick={handleDownload}></lightning-button> -->
+
+    </div>
+</template>

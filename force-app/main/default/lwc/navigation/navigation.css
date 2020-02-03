@@ -1,0 +1,38 @@
+.navigation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.navigation-level1-item {
+  display: block;  
+} 
+
+.navigation-level1-item-title {
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.navigation-level2-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.navigation-level1-items-container {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.open {
+    display: block !important;
+}

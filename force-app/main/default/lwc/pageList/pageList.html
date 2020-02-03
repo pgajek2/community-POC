@@ -1,0 +1,15 @@
+<template>
+
+    <template for:each={pageList} for:item='page'>
+        <div class="slds-box pages-details-container slds-m-vertical_xx-small" key={page.Id}>
+            <h3>{page.Name}</h3>
+            <template for:each={page.Pages__r} for:item='pageDetails'>
+                <div onclick={handleOpenPageDetails} class="pages-details-item" data-id={pageDetails.Id}
+                    key={pageDetails.Id}>
+                    <strong>{pageDetails.Name}</strong> &nbsp; <i>{pageDetails.Description__c}</i>
+                </div>
+            </template>
+        </div>
+    </template>
+
+</template>

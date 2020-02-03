@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/articleContent": [
+                "articleContent/articleContent.js"
+            ],
+            "c/container": [
+                "container/container.js"
+            ],
+            "c/filesList": [
+                "filesList/filesList.js"
+            ],
+            "c/navigation": [
+                "navigation/navigation.js"
+            ],
+            "c/pageList": [
+                "pageList/pageList.js"
+            ],
+            "c/newArticle": [
+                "newArticle/newArticle.js"
+            ],
+            "c/wholeForm": [
+                "wholeForm/wholeForm.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
